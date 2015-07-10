@@ -158,19 +158,6 @@
 			currentPosition += fileInfo.compressed_size;
 
 			// Message delegate
-			if ([delegate respondsToSelector:@selector(zipArchiveShouldUnzipFileAtIndex:totalFiles:archivePath:fileInfo:)]) {
-				if (![delegate zipArchiveShouldUnzipFileAtIndex:currentFileNumber
-                                             totalFiles:(NSInteger)globalInfo.number_entry
-                                            archivePath:path fileInfo:fileInfo]) {
-					success = NO;
-					canceled = YES;
-					break;
-				}
-			}
-			if ([delegate respondsToSelector:@selector(zipArchiveWillUnzipFileAtIndex:totalFiles:archivePath:fileInfo:)]) {
-				[delegate zipArchiveWillUnzipFileAtIndex:currentFileNumber totalFiles:(NSInteger)globalInfo.number_entry
-											 archivePath:path fileInfo:fileInfo];
-			}
 			if ([delegate respondsToSelector:@selector(zipArchiveProgressEvent:total:)]) {
 				[delegate zipArchiveProgressEvent:(NSInteger)currentPosition total:(NSInteger)fileSize];
 			}
@@ -217,6 +204,20 @@
 	        NSDate *modDate = [[self class] _dateWithMSDOSFormat:(UInt32)fileInfo.dosDate];
 	        NSDictionary *directoryAttr = @{NSFileCreationDate: modDate, NSFileModificationDate: modDate};
 
+            if ([delegate respondsToSelector:@selector(zipArchiveShouldUnzipFileAtIndex:totalFiles:filePath:archivePath:fileInfo:)]) {
+                if (![delegate zipArchiveShouldUnzipFileAtIndex:currentFileNumber
+                                                     totalFiles:(NSInteger)globalInfo.number_entry
+                                                       filePath:strPath
+                                                    archivePath:path fileInfo:fileInfo]) {
+                    continue;
+                }
+            }
+            if ([delegate respondsToSelector:@selector(zipArchiveWillUnzipFileAtIndex:totalFiles:filePath:archivePath:fileInfo:)]) {
+                [delegate zipArchiveWillUnzipFileAtIndex:currentFileNumber totalFiles:(NSInteger)globalInfo.number_entry
+                                                filePath:strPath
+                                             archivePath:path fileInfo:fileInfo];
+            }
+            
 			if (isDirectory) {
 				[fileManager createDirectoryAtPath:fullPath withIntermediateDirectories:YES attributes:directoryAttr  error:&err];
 			} else {
@@ -319,12 +320,9 @@
 			ret = unzGoToNextFile( zip );
 
 			// Message delegate
-			if ([delegate respondsToSelector:@selector(zipArchiveDidUnzipFileAtIndex:totalFiles:archivePath:fileInfo:)]) {
+			if ([delegate respondsToSelector:@selector(zipArchiveDidUnzipFileAtIndex:totalFiles:filePath:archivePath:fileInfo:)]) {
 				[delegate zipArchiveDidUnzipFileAtIndex:currentFileNumber totalFiles:(NSInteger)globalInfo.number_entry
-											 archivePath:path fileInfo:fileInfo];
-			} else if ([delegate respondsToSelector: @selector(zipArchiveDidUnzipFileAtIndex:totalFiles:archivePath:unzippedFilePath:)]) {
-				[delegate zipArchiveDidUnzipFileAtIndex: currentFileNumber totalFiles: (NSInteger)globalInfo.number_entry
-											archivePath:path unzippedFilePath: fullPath];
+                                               filePath:strPath archivePath:path fileInfo:fileInfo];
 			}
 
 			currentFileNumber++;
