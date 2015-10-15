@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,77 +14,61 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21CC41A417DB7D1300201DDC"
-               BuildableName = "SSZipArchive.app"
-               BlueprintName = "SSZipArchive"
+               BlueprintIdentifier = "AAEF3BC51BD01DBA0000509E"
+               BuildableName = "SSZipArchive.framework"
+               BlueprintName = "iOS Framework"
                ReferencedContainer = "container:SSZipArchive.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21CC41BF17DB7D1300201DDC"
-               BuildableName = "SSZipArchiveTests.xctest"
-               BlueprintName = "SSZipArchiveTests"
-               ReferencedContainer = "container:SSZipArchive.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21CC41A417DB7D1300201DDC"
-            BuildableName = "SSZipArchive.app"
-            BlueprintName = "SSZipArchive"
-            ReferencedContainer = "container:SSZipArchive.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21CC41A417DB7D1300201DDC"
-            BuildableName = "SSZipArchive.app"
-            BlueprintName = "SSZipArchive"
+            BlueprintIdentifier = "AAEF3BC51BD01DBA0000509E"
+            BuildableName = "SSZipArchive.framework"
+            BlueprintName = "iOS Framework"
             ReferencedContainer = "container:SSZipArchive.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21CC41A417DB7D1300201DDC"
-            BuildableName = "SSZipArchive.app"
-            BlueprintName = "SSZipArchive"
+            BlueprintIdentifier = "AAEF3BC51BD01DBA0000509E"
+            BuildableName = "SSZipArchive.framework"
+            BlueprintName = "iOS Framework"
             ReferencedContainer = "container:SSZipArchive.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
