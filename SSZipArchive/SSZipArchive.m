@@ -444,13 +444,18 @@
     return success;
 }
 
-
 - (instancetype)initWithPath:(NSString *)path
 {
 	if ((self = [super init])) {
 		_path = [path copy];
 	}
 	return self;
+}
+- (instancetype)init
+{
+    NSAssert(NO, @"This method should not be invoked. Please use -initWithPath:");
+    self = [self initWithPath:nil];
+    return nil;
 }
 
 
