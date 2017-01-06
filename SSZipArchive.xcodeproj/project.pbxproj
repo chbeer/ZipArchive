@@ -49,10 +49,10 @@
 		A5CD0D3A1AD3490700E7F209 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CD0D391AD3490700E7F209 /* Default-568h@2x.png */; };
 		AAD6244D1BE27C8500CDE8D1 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC41E317DB7D2F00201DDC /* SSZipArchive.m */; };
 		AAEF3BCE1BD01DEB0000509E /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CC41E217DB7D2F00201DDC /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAEF3BCF1BD01DEB0000509E /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524B17DEFB880060D41A /* crypt.h */; };
-		AAEF3BD01BD01DEB0000509E /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524D17DEFB880060D41A /* ioapi.h */; };
-		AAEF3BD11BD01DEB0000509E /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524F17DEFB880060D41A /* mztools.h */; };
-		AAEF3BD21BD01DEB0000509E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D525117DEFB880060D41A /* unzip.h */; };
+		AAEF3BCF1BD01DEB0000509E /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524B17DEFB880060D41A /* crypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3BD01BD01DEB0000509E /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524D17DEFB880060D41A /* ioapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3BD11BD01DEB0000509E /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D524F17DEFB880060D41A /* mztools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3BD21BD01DEB0000509E /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D525117DEFB880060D41A /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3BD31BD01DEB0000509E /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 210D525317DEFB880060D41A /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3BD41BD01E060000509E /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC41E317DB7D2F00201DDC /* SSZipArchive.m */; };
 		AAEF3BD71BD01E5D0000509E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 210D524C17DEFB880060D41A /* ioapi.c */; };
@@ -429,7 +429,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SS;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sam Soffes";
 				TargetAttributes = {
 					21CC41BF17DB7D1300201DDC = {
@@ -590,26 +590,32 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = SSZipArchive;
@@ -632,19 +638,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = SSZipArchive;
 				SDKROOT = iphoneos;
@@ -723,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -750,6 +763,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
