@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #include "SSZipCommon.h"
 
+#import "SSZipArchive+Ensembles.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol SSZipArchiveDelegate;
